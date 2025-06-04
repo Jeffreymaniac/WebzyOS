@@ -1,0 +1,323 @@
+@import url('https://fonts.bunny.net/css?family=inter:400,700');
+@import url('https://fonts.bunny.net/css?family=fira-code:400,700');
+.hide{
+    display:none;
+}
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+}
+html{
+    -webkit-text-size-adjust: 100%;
+    overflow:clip;
+}
+html.start{
+    background-color: midnightblue;
+    animation: gradientShift 3.8s ease-in-out infinite alternate;
+    background-size: 400% 400%;
+}
+html.os {
+    background-color: #53c3ff;
+}
+  @keyframes gradientShift {
+    0% {
+    background:midnightblue;
+    }
+    100% {
+      background: deepskyblue;
+    }
+  }
+body {
+    font-size:16px;
+    font-family: 'Inter','Helvetica Neue',Helvetica,Arial, system-ui,sans,serif;
+    width:100%;
+    height: 100%;
+}
+.fullWIN,.appContent {
+    width:100%;
+    height:100%;
+    margin:0;
+}
+code, pre {
+  font-family: 'Fira Code','Courier New',monospace;
+}
+button {
+    transition: all 0.3s ease-in-out;
+    cursor:pointer;
+    font-family: 'Inter','Helvetica Neue',Helvetica,Arial, system-ui,sans,serif;
+}
+button:hover {
+    zoom:1.1;
+    opacity: 70%;
+}
+button:active {
+    zoom:1.25;
+}
+button,.appICON {
+    user-select: none;
+}
+pre.cowsay {
+    background-color: black;
+    color:white;
+    text-align: left;
+    letter-spacing:0;
+    font-size: 12px;
+    overflow: scroll;
+    
+}
+#WINstartUp {
+    overflow:scroll;
+    margin:25%;
+    margin-top:5vh;
+    width:50%;
+    height:50%;
+
+    overflow-wrap: break-word;
+    background-color: #084f4f;
+    text-align: center;
+    box-shadow: 1vw 1vw 2vw white, -1vw -1vw 2vw white;
+    h1 {
+    color: rgb(130, 249, 29);
+    font-size: 8vw;
+    text-shadow: .5vw .25vw #0a6a89, midnightblue 1.2vw .5vw;
+    }
+    button {
+    color:saddlebrown;
+    background: #190505;
+    padding: 2vw 3vw;
+    border:initial;
+    }
+}
+.appICON {
+    cursor:pointer;
+    width:fit-content;
+    height: fit-content;
+    max-width:9vw;
+    max-height:9vw;
+    transition: all 0.3s ease-in-out;
+    color:white;
+    display: inline-block;
+    text-align: center;
+    padding: 1vh;
+    padding-top:2vh;
+    font-size: 100%;
+}
+.appICON img {
+width:4vw;
+height:4vw;
+-webkit-user-drag:none;
+user-drag:none;
+}
+.appICON p {
+    padding: 0;
+    margin:0;
+    overflow: clip;
+    text-overflow: ellipsis;
+    text-rendering: optimizeSpeed;
+    text-shadow:
+    .04em .04em 0 black,
+    -.04em -.04em 0 black,
+    -.04em .04em 0 black,
+    .04em -.04em 0 black;
+    font-size: 1.12vw;
+    font-weight: bolder;
+}
+.appICON:hover {
+    zoom:1.05;
+    opacity: 90%;
+}
+#navbar {
+width:100%;
+height:7vh;
+background-color: gray;
+background:linear-gradient(20deg,black, rgba(1,1,1,1)),
+linear-gradient(95deg, rgba(5, 5, 44, 0.91), rgba(5,1,45,0.2));
+    backdrop-filter: blur(100%);
+-webkit-backdrop-filter: blur(15px);
+position: fixed;
+z-index:2;
+bottom: 0;
+    color:white;
+}
+#launcherBTN {
+    background-color: rgba(242, 242, 242, 0.42);
+    width:1vh;
+    height:100%;
+    min-width: fit-content;
+    min-height: max-content;
+    border:0;
+    text-align: left;
+    float:left;
+    font-size:2vw;
+    padding:0;
+}
+#navbar .right, #navbar .left, #navbar .center {
+    width:calc(100% / 3);
+    float:left;
+    height:100%;
+}
+#navbar .center img {
+    height:98%;
+    width:auto;
+    padding-top:1%;
+    padding-bottom:1%;
+    cursor:pointer;
+    image-rendering: optimizeSpeed;
+    transition:100ms ease-in;
+}
+#navbar .center img:hover {
+    padding:0;
+padding-bottom:.5%;
+}
+#time,#battery {
+    float:right;
+    padding-right:1vw;
+    padding-top:2vh;
+    cursor:default;
+    font-size: 2vh;
+}
+#modal[inert],.runningApplication[inert]{
+    display:none;
+    visibility: hidden;
+}
+#modal {
+margin:0;
+background-color: rgba(105, 105, 105, 0.74);
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; }
+.inner {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+    color:black;
+}
+#modal button.close {
+    width:50px;
+    height:50px;
+    float:right;
+    font-family: mono;
+    text-align: center;
+    font-size: 50px;
+    color:lightgray;
+    background-color: #8b0822;
+    border:0;
+    border:groove darkred;
+    
+}
+.runningApplication {
+width:100%;
+min-height:100%;
+height:100%;
+background-color: #d6d6d6;
+color:black;
+overflow:scroll;
+position: fixed;
+z-index: 100;
+left: 0;
+top: 0;
+margin:0;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+padding:0;
+}
+.runningApplication .appContent {
+    width:100%;
+    height:94%;
+    margin:0;
+    padding:0;
+    overflow:scroll;
+}
+.runningApplication .appContent div {
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow:scroll;
+
+}
+.runningApplication .top {
+    height:6%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background-color: midnightblue;
+    color: white;
+    font-weight: bold;
+    cursor: move;
+    overflow: hidden;
+    margin:0;
+user-select: none;
+
+}
+.runningApplication .top span {
+    justify-self: left;
+    padding: 1vw;
+    width: 87.5%;
+    font-size: 1vw;
+}
+.window-buttons {
+    display: flex;
+    height:100%;
+    width:12.5%;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+.window-button {
+    width: calc(100% / 3);
+    border: none;
+    cursor: pointer;
+    transition: zoom 0.2s ease;
+    text-align: center;
+    font-size: 2vw;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.window-button:hover {
+    zoom: scale(0.95);
+}
+
+#drawingApp-canvas {
+    touch-action: none;
+    outline: solid black 1px;
+    width:80%;
+    max-height:80%;
+    aspect-ratio: 16/9;
+    background-color: white;
+    margin:0;
+    padding:0;
+}   
+#drawingApp-color{
+    min-width: fit-content;
+    transform-origin: top left;
+}
+#browserApp-tabs, #browserApp-urlbar {
+    width:100%;
+    background-color: #abbdc6;
+}
+#browserApp-tabs {
+    height:6%;
+}
+#browserApp-urlbar {
+    height:8%;
+}
+#browserApp-displays {
+    background-color: white;
+    height:86%;
+    width:100%;
+}
+.browserApp-searchbar {
+    width:75%;
+    margin:0;
+    padding:0;
+}

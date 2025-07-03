@@ -2,7 +2,7 @@
   "name": "WebzyOS",
   "short_name": "WebzyOS",
   "description": "Good web OS 4 you.",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#a8e9f9",
   "theme_color": "#73b8ec",

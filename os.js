@@ -482,10 +482,7 @@ export var calculatorApp = `<?xml version="1.0" encoding="UTF-8"?>
     <markup>
         <div style="font-family:Roboto,inherit">
         <h1>Calculator</h1>
-        <div style="min-width:20%">
-        <span id="calculatorApp-output1">Output</span>
-        </div>
-<form onsubmit="event.preventDefault(); 
+        <form onsubmit="event.preventDefault(); 
                 (async function() {
                   const result = await window.runTerminalThing('/calculate ' + document.getElementById('calculatorApp-input1').value);
                   document.getElementById('calculatorApp-output1').innerHTML = result;
@@ -493,6 +490,10 @@ export var calculatorApp = `<?xml version="1.0" encoding="UTF-8"?>
     <input id="calculatorApp-input1" placeholder="type math here" style="font:inherit;min-width:50%" />
     <input type="submit" value="Submit" style="font:inherit" />
 </form>
+        <div style="min-width:20%">
+        <span id="calculatorApp-output1">Output</span>
+        </div>
+
         </div>
     </markup>
 </app>`;

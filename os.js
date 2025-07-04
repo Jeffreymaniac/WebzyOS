@@ -487,8 +487,8 @@ export var calculatorApp = `<?xml version="1.0" encoding="UTF-8"?>
                   const result = await window.runTerminalThing('/calculate ' + document.getElementById('calculatorApp-input1').value);
                   document.getElementById('calculatorApp-output1').innerHTML = result;
                 })();">
-    <input id="calculatorApp-input1" placeholder="type math here" style="font:inherit;min-width:50%" />
-    <input type="submit" value="Submit" style="font:inherit" />
+    <input id="calculatorApp-input1" placeholder="type math here" style="font:inherit;min-width:50%;height:20px" />
+    <input type="submit" value="Submit" style="font:inherit;height:20px" />
 </form>
         <div style="min-width:20%">
         <span id="calculatorApp-output1">Output</span>
